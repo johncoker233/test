@@ -18,9 +18,7 @@ import {
   Badge,
   Pagination,
 } from '@windmill/react-ui'
-import response from '../utils/demo/tableData'
 
-// Example mappings for status and type
 const statusMapping = {
   '0': { text: 'Pending', color: 'yellow' },
   '1': { text: 'In Progress', color: 'blue' },
