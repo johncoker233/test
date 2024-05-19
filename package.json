@@ -7,20 +7,21 @@
     "tailwind:dev": "tailwindcss build src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
     "tailwind:build": "cross-env NODE_ENV=production postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
     "prestart": "npm run tailwind:dev",
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "prebuild": "set NODE_OPTIONS=--openssl-legacy-provider && npm run tailwind:build",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build ",
+    "start": "react-scripts start",
+    "prebuild": "npm run tailwind:build",
+    "build": "react-scripts build ",
     "cz": "git-cz",
     "release": "release-it",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-
+  "engines": {
+    "node": "16"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "4.2.4",
-    "@testing-library/react": "9.5.0",
     "@testing-library/user-event": "7.2.1",
-    "@windmill/react-ui": "0.3.1",
+    "@windmill/react-ui": "0.6.0",
     "chart.js": "2.9.3",
     "classnames": "2.2.6",
     "faker": "4.1.0",
